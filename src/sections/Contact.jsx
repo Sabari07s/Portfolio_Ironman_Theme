@@ -50,7 +50,7 @@ const Contact = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ mb: 8, textAlign: 'center' }}>
+        <Box sx={{ mb: 6, textAlign: 'center' }}>
           <Typography
             variant="caption"
             className="glow-text-cyan"
@@ -76,9 +76,9 @@ const Contact = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
           {/* Left Side: Contact details / stats */}
-          <Grid item xs={12} md={5}>
+          <Grid xs={12} md={5}>
             <Box
               className="hud-panel"
               sx={{
@@ -169,7 +169,7 @@ const Contact = () => {
           </Grid>
 
           {/* Right Side: Form */}
-          <Grid item xs={12} md={7}>
+          <Grid xs={12} md={7}>
             <Box
               className="hud-panel red-panel"
               sx={{
@@ -180,7 +180,7 @@ const Contact = () => {
             >
               <form onSubmit={handleTransmit}>
                 <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid xs={12} sm={6}>
                     <TextField
                       label="NAME CAPTURE"
                       variant="outlined"
@@ -199,7 +199,7 @@ const Contact = () => {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid xs={12} sm={6}>
                     <TextField
                       label="EMAIL RETRIEVAL"
                       variant="outlined"
@@ -219,7 +219,7 @@ const Contact = () => {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid xs={12}>
                     <TextField
                       label="MESSAGE PAYLOAD"
                       variant="outlined"
@@ -240,7 +240,7 @@ const Contact = () => {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid xs={12}>
                     <Button
                       variant="contained"
                       color="primary"

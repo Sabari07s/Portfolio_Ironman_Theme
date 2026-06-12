@@ -62,7 +62,7 @@ const Experience = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ mb: 8, textAlign: 'center' }}>
+        <Box sx={{ mb: 6, textAlign: 'center' }}>
           <Typography
             variant="caption"
             className="glow-text-cyan"
@@ -88,11 +88,11 @@ const Experience = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
           {jobs.map((job, idx) => {
             const isExpanded = expandedIndex === idx;
             return (
-              <Grid item xs={12} key={idx}>
+              <Grid xs={12} md={10} key={idx}>
                 <Box
                   className={`hud-panel ${idx === 0 ? 'red-panel' : ''}`}
                   sx={{
@@ -115,9 +115,9 @@ const Experience = () => {
                   }}
                   onClick={() => toggleExpand(idx)}
                 >
-                  <Grid container spacing={2} alignItems="center">
+                  <Grid container spacing={2} sx={{ alignItems: 'center' }}>
                     {/* Mark Logo */}
-                    <Grid item xs={12} sm={2} sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'flex-start', sm: 'center' } }}>
+                    <Grid xs={12} sm={2} sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'flex-start', sm: 'center' } }}>
                       <Typography
                         variant="h4"
                         sx={{
@@ -143,7 +143,7 @@ const Experience = () => {
                     </Grid>
 
                     {/* Job Details */}
-                    <Grid item xs={12} sm={8}>
+                    <Grid xs={12} sm={8}>
                       <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 0.5 }}>
                         {job.title}
                       </Typography>
@@ -156,7 +156,7 @@ const Experience = () => {
                     </Grid>
 
                     {/* Expand Trigger Icon */}
-                    <Grid item xs={12} sm={2} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Grid xs={12} sm={2} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                       <Box
                         sx={{
                           display: 'flex',

@@ -43,8 +43,8 @@ const Home = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={7}>
+        <Grid container spacing={4} sx={{ alignItems: 'center' }}>
+          <Grid xs={12} md={7}>
             <Box
               className="hud-panel"
               sx={{
@@ -126,11 +126,24 @@ const Home = () => {
                 >
                   TRANSMIT UPLINK
                 </Button>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  href="/resume.pdf"
+                  download="Sabari_Manikandan_Resume.pdf"
+                  sx={{
+                    px: 3,
+                    py: 1.2,
+                    fontSize: '0.85rem',
+                  }}
+                >
+                  DOWNLOAD RESUME
+                </Button>
               </Box>
             </Box>
           </Grid>
           
-          <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Box
               sx={{
                 position: 'relative',

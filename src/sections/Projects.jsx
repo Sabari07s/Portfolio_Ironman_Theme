@@ -81,7 +81,7 @@ const Projects = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ mb: 8, textAlign: 'center' }}>
+        <Box sx={{ mb: 6, textAlign: 'center' }}>
           <Typography
             variant="caption"
             className="glow-text-cyan"
@@ -109,7 +109,7 @@ const Projects = () => {
 
         <Grid container spacing={4}>
           {projectsList.map((project, idx) => (
-            <Grid item xs={12} sm={6} md={4} key={idx}>
+            <Grid xs={12} sm={6} md={4} key={idx}>
               <Card
                 className="hud-panel"
                 sx={{

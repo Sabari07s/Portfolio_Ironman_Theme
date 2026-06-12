@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, LinearProgress } from '@mui/material';
+import { Box, Container, Typography, Grid, LinearProgress, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const skills = [
@@ -49,9 +49,9 @@ const About = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
           {/* Left Side: Biography dossier */}
-          <Grid item xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <Box
               className="hud-panel"
               sx={{
@@ -93,7 +93,7 @@ const About = () => {
               </Typography>
 
               <Grid container spacing={2} sx={{ fontFamily: '"Share Tech Mono", monospace', mt: 'auto' }}>
-                <Grid item xs={6}>
+                <Grid xs={6}>
                   <Typography variant="body2" sx={{ color: '#FFC107' }}>
                     [NAME]: Sabari Manikandan E
                   </Typography>
@@ -101,7 +101,7 @@ const About = () => {
                     [STATUS]: Active Duty
                   </Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid xs={6}>
                   <Typography variant="body2" sx={{ color: '#00F0FF' }}>
                     [EXP]: 1.5+ Years
                   </Typography>
@@ -110,17 +110,35 @@ const About = () => {
                   </Typography>
                 </Grid>
               </Grid>
+              <Box sx={{ mt: 3 }}>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  href="/resume.pdf"
+                  download="Sabari_Manikandan_Resume.pdf"
+                  sx={{
+                    fontFamily: '"Share Tech Mono", monospace',
+                    fontSize: '0.85rem',
+                    width: '100%',
+                  }}
+                >
+                  DOWNLOAD SPEC RESUME (PDF)
+                </Button>
+              </Box>
             </Box>
           </Grid>
 
           {/* Right Side: Animated Skill diagnostic charts */}
-          <Grid item xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <Box
               className="hud-panel"
               sx={{
                 p: 4,
                 backgroundColor: 'rgba(11, 15, 25, 0.8)',
                 border: '1px solid rgba(0, 240, 255, 0.2)',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
               <Typography
@@ -143,7 +161,7 @@ const About = () => {
                 </Typography>
               </Typography>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3.5 }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3.5, mt: 'auto' }}>
                 {skills.map((skill, index) => (
                   <Box key={index}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.8 }}>
@@ -155,7 +173,7 @@ const About = () => {
                           color: '#e2e8f0',
                         }}
                       >
-                        {skill.name}
+                        {skill.name} <span style={{ color: 'rgba(0, 240, 255, 0.4)', fontSize: '0.75rem', marginLeft: '6px' }}>({skill.code})</span>
                       </Typography>
                       <Typography
                         variant="body2"
@@ -169,20 +187,6 @@ const About = () => {
                       </Typography>
                     </Box>
                     <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                      <Typography 
-                        variant="caption" 
-                        sx={{ 
-                          position: 'absolute', 
-                          left: -8, 
-                          color: 'rgba(0, 240, 255, 0.4)', 
-                          fontFamily: '"Share Tech Mono", monospace', 
-                          fontSize: '0.6rem',
-                          transform: 'translateX(-100%)'
-                        }}
-                      >
-                        {skill.code}
-                      </Typography>
-                      
                       {/* Animated Progress Bar container */}
                       <Box sx={{ width: '100%', height: '8px', backgroundColor: 'rgba(0, 240, 255, 0.05)', border: '1px solid rgba(0, 240, 255, 0.2)' }}>
                         <motion.div
